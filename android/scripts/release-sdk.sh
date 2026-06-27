@@ -19,7 +19,7 @@ fi
 
 export MVN_REPO=$THE_MVN_REPO
 
-echo "Releasing Jitsi Meet SDK ${SDK_VERSION}"
+echo "Releasing Just Meet SDK ${SDK_VERSION}"
 echo "Using ${MVN_REPO} as the Maven repo"
 
  if [[ $MVN_HTTP == 0 ]]; then
