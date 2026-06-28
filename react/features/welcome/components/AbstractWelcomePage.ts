@@ -253,6 +253,14 @@ export class AbstractWelcomePage<P extends IProps> extends Component<P, IState> 
         return null;
     }
 
+    generateRandomHash() {
+        const bytes = new Uint8Array(4); // 4 bytes = 32 bits = 8 hex characters
+        crypto.getRandomValues(bytes);
+        return Array.from(bytes)
+            .map(b => b.toString(16).padStart(2, '0'))
+            .join('');
+    }
+
     /**
      * Triggers the generation of a new room name and initiates an animation of
      * its changing.
@@ -261,7 +269,8 @@ export class AbstractWelcomePage<P extends IProps> extends Component<P, IState> 
      * @returns {void}
      */
     _updateRoomName() {
-        const generatedRoomName = generateRoomWithoutSeparator();
+        // const generatedRoomName = generateRoomWithoutSeparator();
+        const generatedRoomName = this.generateRandomHash();
         const roomPlaceholder = '';
         const updateTimeoutId = window.setTimeout(this._updateRoomName, 10000);
 

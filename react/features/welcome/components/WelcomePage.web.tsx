@@ -200,10 +200,10 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
             <div
                 className = { `welcome ${contentClassName} ${footerClassName}` }
                 id = 'welcome_page'>
-                <div className = 'header'>
-                    <div className = 'header-image' />
-                    <div className = 'header-container'>
-                        <div className = 'header-watermark-container'>
+                {/* <div className = 'header'> */}
+                    {/* <div className = 'header-image' /> */}
+                    {/* <div className = 'header-container'> */}
+                        {/* <div className = 'header-watermark-container'>
                             <div className = 'welcome-watermark'>
                                 <Watermarks
                                     defaultJitsiLogoURL = { DEFAULT_WELCOME_PAGE_LOGO_URL }
@@ -220,17 +220,20 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                                     ref = { this._setAdditionalToolbarContentRef } />
                                 : null
                             }
-                        </div>
-                        <h1 className = 'header-text-title'>
+                        </div> */}
+                        {/* <h1 className = 'header-text-title'>
                             {t('welcomepage.headerTitle')}
-                        </h1>
-                        <span className = 'header-text-subtitle'>
+                        </h1> */}
+                        {/* <span className = 'header-text-subtitle'>
                             {t('welcomepage.headerSubtitle')}
-                        </span>
+                        </span> */}
                         <div id = 'enter_room'>
-                            <div className = 'join-meeting-container'>
-                                <div className = 'enter-room-input-container'>
-                                    <form onSubmit = { this._onFormSubmit }>
+                            {/* <div className = 'join-meeting-container'> */}
+                                {/* <div className = 'enter-room-input-container'>
+                                    
+                                </div> */}
+
+                                <form onSubmit = { this._onFormSubmit }>
                                         <input
                                             aria-disabled = 'false'
                                             aria-label = 'Meeting name input'
@@ -241,10 +244,9 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                                             pattern = { ROOM_NAME_VALIDATE_PATTERN_STR }
                                             placeholder = { this.state.roomPlaceholder }
                                             ref = { this._setRoomInputRef }
-                                            type = 'text'
+                                            type = 'hidden'
                                             value = { this.state.room } />
                                     </form>
-                                </div>
 
                                 <button
                                     aria-disabled = 'false'
@@ -253,12 +255,13 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                                     id = 'enter_room_button'
                                     onClick = { this._onFormSubmit }
                                     tabIndex = { 0 }
+                                    // style={{display: 'none'}}
                                     type = 'button'>
                                     {t('welcomepage.startMeeting')}
                                 </button>
-                            </div>
-                        </div>
-                        {this._titleHasNotAllowCharacter && (
+                            {/* </div> */}
+                        {/* </div> */}
+                        {/* {this._titleHasNotAllowCharacter && (
                             <div
                                 className = 'not-allow-title-character-div'
                                 role = 'alert'>
@@ -267,8 +270,8 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                                     {t('welcomepage.roomNameAllowedChars')}
                                 </span>
                             </div>
-                        )}
-                        {this._renderInsecureRoomNameWarning()}
+                        )} */}
+                        {/* {this._renderInsecureRoomNameWarning()}
 
                         {_moderatedRoomServiceUrl && (
                             <div id = 'moderated-meetings'>
@@ -276,11 +279,11 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                                     translateToHTML(
                                         t, 'welcomepage.moderatedMessage', { url: _moderatedRoomServiceUrl })
                                 }
-                            </div>)}
-                    </div>
+                            </div>)} */}
+                    {/* </div> */}
                 </div>
 
-                <div className = 'welcome-cards-container'>
+                {/* <div className = 'welcome-cards-container'>
                     <div className = 'welcome-card-column'>
                         <div className = 'welcome-tabs welcome-card welcome-card--blue'>
                             {this._renderTabs()}
@@ -297,8 +300,8 @@ class WelcomePage extends AbstractWelcomePage<IProps> {
                             className = 'welcome-page-content'
                             ref = { this._setAdditionalContentRef } />
                         : null}
-                </div>
-                {DISPLAY_WELCOME_FOOTER && this._renderFooter()}
+                </div> */}
+                {/* {DISPLAY_WELCOME_FOOTER && this._renderFooter()} */}
             </div>
 
         );

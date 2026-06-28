@@ -118,7 +118,7 @@ body.welcome-page {
         }
 
         #enter_room {
-            display: $welcomePageEnterRoomDisplay;
+            display: none;
             align-items: center;
             max-width: 480px;
             width: $welcomePageEnterRoomWidth;
