@@ -261,6 +261,7 @@ export default class BaseApp<P> extends Component<P, IState> {
         href?: string;
         props?: Object;
     }): Promise<any> {
+        console.log(`navigation test: ${route.href}`)
         if (isEqual(route, this.state.route)) {
             return Promise.resolve();
         }

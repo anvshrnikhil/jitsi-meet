@@ -14,6 +14,7 @@ import { _getRouteToRender } from './getRouteToRender';
 import { IStore } from './types';
 
 MiddlewareRegistry.register(store => next => action => {
+    console.log(`action type log: ${action.type}`)
     switch (action.type) {
     case CONNECTION_ESTABLISHED:
         return _connectionEstablished(store, next, action);
