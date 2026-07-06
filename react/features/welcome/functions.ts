@@ -13,13 +13,15 @@ import { toState } from '../base/redux/functions';
  * {@code true}; otherwise, {@code false}.
  */
 export function isWelcomePageEnabled(stateful: IStateful) {
-    if (navigator.product === 'ReactNative') {
-        return getFeatureFlag(stateful, WELCOME_PAGE_ENABLED, false);
-    }
+    // console.log(`navigator page test nikhil: ${navigator.product}`);
+    // if (navigator.product === 'ReactNative') {
+    //     return getFeatureFlag(stateful, WELCOME_PAGE_ENABLED, false);
+    // }
 
-    const config = toState(stateful)['features/base/config'];
+    // const config = toState(stateful)['features/base/config'];
 
-    return !config.welcomePage?.disabled;
+    // return !config.welcomePage?.disabled;
+    return false;
 }
 
 /**

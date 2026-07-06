@@ -713,13 +713,13 @@ var config = {
     // enableWelcomePage: true,
 
     // Configs for welcome page.
-    // welcomePage: {
+    welcomePage: {
     //     // Whether to disable welcome page. In case it's disabled a random room
     //     // will be joined when no room is specified.
-    //     disabled: false,
+        disabled: true,
     //     // If set, landing page will redirect to this URL.
     //     customUrl: ''
-    // },
+    },
 
     // Configs for the lobby screen.
     // lobby: {
