@@ -225,52 +225,51 @@ const PreMeetingScreen = ({
     }, [ _roomName ]);
 
     return (
-        // <div className = { clsx('premeeting-screen', classes.container, className) }>
-        //     <div style = { style }>
-        //         <div className = { classes.content }>
-        //             {_isPreCallTestEnabled && <ConnectionStatus />}
+        <div className = { clsx('premeeting-screen', classes.container, className) }>
+            <div style = { style }>
+                <div className = { classes.content }>
+                    {_isPreCallTestEnabled && <ConnectionStatus />}
 
-        //             <div className = { classes.contentControls }>
-        //                 <div className = { classes.paddedContent }>
-        //                     <h1 className = { classes.title }>
-        //                         {title}
-        //                     </h1>
-        //                     {_roomName && (
-        //                         <span className = { classes.roomNameContainer }>
-        //                             {isOverflowing ? (
-        //                                 <Tooltip content = { _roomName }>
-        //                                     <span
-        //                                         className = { classes.roomName }
-        //                                         ref = { roomNameRef }>
-        //                                         {_roomName}
-        //                                     </span>
-        //                                 </Tooltip>
-        //                             ) : (
-        //                                 <span
-        //                                     className = { classes.roomName }
-        //                                     ref = { roomNameRef }>
-        //                                     {_roomName}
-        //                                 </span>
-        //                             )}
-        //                         </span>
-        //                     )}
-        //                     {children}
-        //                 </div>
-        //                 {_buttons.length && <Toolbox toolbarButtons = { _buttons } />}
-        //                 <div className = { classes.paddedContent }>
-        //                     {skipPrejoinButton}
-        //                     {showUnsafeRoomWarning && <UnsafeRoomWarning />}
-        //                     {showDeviceStatus && <DeviceStatus />}
-        //                     {showRecordingWarning && <RecordingWarning />}
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <Preview
-        //         videoMuted = { videoMuted }
-        //         videoTrack = { videoTrack } />
-        // </div>
-        <></>
+                    <div className = { classes.contentControls }>
+                        <div className = { classes.paddedContent }>
+                            <h1 className = { classes.title }>
+                                {title}
+                            </h1>
+                            {_roomName && (
+                                <span className = { classes.roomNameContainer }>
+                                    {isOverflowing ? (
+                                        <Tooltip content = { _roomName }>
+                                            <span
+                                                className = { classes.roomName }
+                                                ref = { roomNameRef }>
+                                                {_roomName}
+                                            </span>
+                                        </Tooltip>
+                                    ) : (
+                                        <span
+                                            className = { classes.roomName }
+                                            ref = { roomNameRef }>
+                                            {_roomName}
+                                        </span>
+                                    )}
+                                </span>
+                            )}
+                            {children}
+                        </div>
+                        {_buttons.length && <Toolbox toolbarButtons = { _buttons } />}
+                        <div className = { classes.paddedContent }>
+                            {skipPrejoinButton}
+                            {showUnsafeRoomWarning && <UnsafeRoomWarning />}
+                            {showDeviceStatus && <DeviceStatus />}
+                            {showRecordingWarning && <RecordingWarning />}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* <Preview
+                videoMuted = { videoMuted }
+                videoTrack = { videoTrack } /> */}
+        </div>
     );
 };
 
