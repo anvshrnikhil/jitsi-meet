@@ -43,6 +43,7 @@ export interface IProps {
  * @returns {ReactElement}
  */
 function Preview(props: IProps) {
+    console.log("Inside Preview function");
     const { _participantId, flipVideo, name, videoMuted, videoTrack } = props;
     const className = flipVideo ? 'flipVideoX' : '';
 
@@ -58,20 +59,20 @@ function Preview(props: IProps) {
 
     return (
         <div id = 'preview'>
-            {!videoMuted && videoTrack
+            {/* {!videoMuted && videoTrack
                 ? (
                     <Video
                         className = { className }
                         id = 'prejoinVideo'
                         videoTrack = {{ jitsiTrack: videoTrack }} />
                 )
-                : (
+                : ( */}
                     <Avatar
                         className = 'premeeting-screen-avatar'
                         displayName = { name }
                         participantId = { _participantId }
                         size = { 200 } />
-                )}
+                {/* )} */}
         </div>
     );
 }

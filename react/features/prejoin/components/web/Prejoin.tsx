@@ -248,6 +248,7 @@ const Prejoin = ({
      * @returns {void}
      */
     const onJoinButtonClick = () => {
+        console.log("inside onJoinButtonClick fucntion");
         if (showErrorOnJoin) {
             dispatch(openDisplayNamePrompt({
                 onPostSubmit: joinConference,

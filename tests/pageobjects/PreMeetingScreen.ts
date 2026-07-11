@@ -25,6 +25,7 @@ export default abstract class PreMeetingScreen extends BasePageObject {
      * Interacts with the view to enter a display name.
      */
     async enterDisplayName(displayName: string) {
+        console.log("inside enterDisplayName function");
         const displayNameInput = this.getDisplayNameInput();
 
         await displayNameInput.click();
@@ -41,6 +42,7 @@ export default abstract class PreMeetingScreen extends BasePageObject {
      * @returns {Promise<boolean>}
      */
     waitToJoinLobby(): Promise<boolean> {
+        console.log("inside waitToJoinLobby function");
         return this.participant.driver.waitUntil(
             () => this.isLobbyRoomJoined(),
             {
@@ -54,6 +56,7 @@ export default abstract class PreMeetingScreen extends BasePageObject {
      * Checks internally whether lobby room is joined.
      */
     isLobbyRoomJoined() {
+        console.log("inside isLobbyRoomJoined function");
         return this.participant.execute(
             () => APP?.conference?._room?.room?.getLobby()?.lobbyRoom?.joined === true);
     }
@@ -69,6 +72,7 @@ export default abstract class PreMeetingScreen extends BasePageObject {
      * Interacts with the view to enter a password.
      */
     async enterPassword(password: string) {
+        console.log("inside enterPassword function");
         const passwordButton = this.getPasswordButton();
 
         await passwordButton.moveTo();
