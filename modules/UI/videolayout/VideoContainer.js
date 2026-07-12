@@ -508,7 +508,9 @@ export class VideoContainer extends LargeContainer {
      * @param {string} videoType video type
      */
     setStream(userID, stream, videoType) {
+        console.log('inside setStream function');
         if (this.userId === userID && this.stream === stream && !stream?.forceStreamToReattach) {
+            console.log(`SetStream on the large video for user ${userID} ignored: the stream is not changed!`);
             logger.debug(`SetStream on the large video for user ${userID} ignored: the stream is not changed!`);
 
             // Handles the use case for the remote participants when the
