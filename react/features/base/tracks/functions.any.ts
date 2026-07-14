@@ -159,6 +159,7 @@ export function getLocalTrack(tracks: ITrack[], mediaType: MediaType, includePen
  */
 export function getLocalTracks(tracks: ITrack[], includePending = false) {
     console.log(`inside getLocalTracks fucntion with property includePending ${includePending}`);
+    console.log(`inside getLocalTracks get tracks ${tracks.at(0)?.codec}`);
     // XXX A local track is considered ready only once it has its `jitsiTrack`
     // property set by the `TRACK_ADDED` action. Until then there is a stub
     // added just before the `getUserMedia` call with a cancellable
