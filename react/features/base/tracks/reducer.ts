@@ -44,6 +44,7 @@ function track(state: ITrack, action: AnyAction) {
 
     case TRACK_UPDATED: {
         const t = action.track;
+        console.log(`what is this track man? ${t.jitsiTrack}`)
 
         if (state.jitsiTrack === t.jitsiTrack) {
             // Make sure that there's an actual update in order to reduce the

@@ -758,6 +758,7 @@ async function _trackAddedOrRemoved(store: IStore, next: Function, action: AnyAc
             const jitsiTrack = action.track.jitsiTrack;
 
             if (action.type === TRACK_ADDED) {
+                console.log("inside TRACK_ADDED middleware");
                 // If gUM is slow and tracks are created after the user has already joined the conference, avoid
                 // adding the tracks to the conference if the user is a visitor.
                 if (!iAmVisitor(state)) {

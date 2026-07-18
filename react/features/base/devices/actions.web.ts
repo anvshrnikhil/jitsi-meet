@@ -156,6 +156,7 @@ export function getAvailableDevices() {
                 const oldDevices = flattenAvailableDevices(getState()['features/base/devices'].availableDevices);
 
                 if (areDevicesDifferent(oldDevices, filteredDevices)) {
+                    console.log(`Hey buddy, its time to kill you`);
                     logDevices(ignoredDevices, 'Ignored devices on device list changed:');
                     dispatch(updateDeviceList(filteredDevices));
                 }

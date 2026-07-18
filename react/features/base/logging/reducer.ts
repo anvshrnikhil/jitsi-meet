@@ -17,8 +17,8 @@ const DEFAULT_LOGGING_CONFIG: ILoggingConfig = {
     loggers: {
         // The following are too verbose in their logging with the
         // {@link #defaultLogLevel}:
-        'rtc:TraceablePeerConnection': 'info',
-        'xmpp:strophe.util': 'log'
+        'rtc:TraceablePeerConnection': 'trace',
+        'xmpp:strophe.util': 'trace'
     }
 };
 
